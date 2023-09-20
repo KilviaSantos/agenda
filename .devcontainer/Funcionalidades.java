@@ -15,7 +15,7 @@ public class Funcionalidades {
             }
         } while (opcao < 0 || opcao > 5);
         System.out.println("Você escolheu a opção " + opcao);
-
+        Operacao.processarOpcao(opcao);
        
     }
 }
