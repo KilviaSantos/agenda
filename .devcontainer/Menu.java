@@ -1,8 +1,7 @@
 public class Menu {
-public static void main(String[] args) {
-    printMenu();
-}
-    private static void printMenu() {
+
+   
+    public static void printMenu() {
         System.out.println("|                                              Olá, querido usuário !                                                                          |");
         System.out.println("+----------------------------------------------------------------------------------------------------------------------------------------------+");
         System.out.println("|                                  Bem-vindo ao Menu da sua Agenda, escolha entre as opções:                                                   |");
