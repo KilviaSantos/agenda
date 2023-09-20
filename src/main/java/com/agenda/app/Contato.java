@@ -1,3 +1,4 @@
+package com.agenda.app;
 public class Contato {
     private String id;
     private String nome;

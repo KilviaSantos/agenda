@@ -1,3 +1,4 @@
+package com.agenda.app;
 public class Operacao {
     
     public static void processarOpcao(int opcao) {
