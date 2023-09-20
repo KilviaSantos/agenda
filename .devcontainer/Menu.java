@@ -1,7 +1,7 @@
 public class Menu {
 
     private void printMenu() {
-        out.println("Hello, " + System.getProperty("user.nome") + "!");
+        out.println("Olá, querido usuário !");
         out.println("+----------------------------------------------------------------------------------------------------------------------------------------------+");
         out.println("|                                  Bem-vindo ao Menu da sua Agenda, escolha entre as opções:                                                   |");
         out.println("+----------------------------------------------------------------------------------------------------------------------------------------------+");
