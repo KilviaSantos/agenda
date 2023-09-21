@@ -13,15 +13,8 @@ DESCRIÇÃO DO PROGRAMA: O programa trata-se de uma agenda de contatos em que pe
 
 Incluir: "<
 
-  CREATE TABLE contato (
-    id INT PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL,
-    endereco VARCHAR(50) NOT NULL,
-    email VARCHAR(50) UNIQUE,
-    telefone VARCHAR(15)
-  );
-
->"
+ INSERT INTO contato (id, 'nome','endereco', 'telefone', 'email') VALUES (1, 'Fernanda', 'Rua Suécia, 53', '99999-9999', 'fernanda@uece.br').
+ >"
 
 Alterar: "<
 
