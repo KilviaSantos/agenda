@@ -12,7 +12,8 @@
 			"mavenVersion": "3.8.6",
 			"installGradle": "false"
 		},
-		"ghcr.io/devcontainers-contrib/features/ant-sdkman:2": {}
+		"ghcr.io/devcontainers-contrib/features/ant-sdkman:2": {},
+		"ghcr.io/itsmechlark/features/postgresql:1":{}
 	},
 
 	// Configure tool-specific properties.
@@ -23,6 +24,8 @@
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
 				"eamodio.gitlens",
+				"cweijan.vscode-postgresql-client2",
+				"GitHub.vscode-pull-request-github",
 				"vscjava.vscode-java-pack"
 			]
 		}
