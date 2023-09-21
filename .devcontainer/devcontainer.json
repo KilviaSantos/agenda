@@ -3,9 +3,7 @@
 {
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"image": "mcr.microsoft.com/devcontainers/java:0-17",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
@@ -14,7 +12,8 @@
 			"mavenVersion": "3.8.6",
 			"installGradle": "false"
 		},
-		"ghcr.io/devcontainers-contrib/features/ant-sdkman:2": {}
+		"ghcr.io/devcontainers-contrib/features/ant-sdkman:2": {},
+		"ghcr.io/itsmechlark/features/postgresql:1":{}
 	},
 
 	// Configure tool-specific properties.
