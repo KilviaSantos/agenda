@@ -1,39 +1,29 @@
 package com.agenda.app;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
- 
-/**
- * App
- */
-public class App {
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.Scanner;
 
-  public static void main(String[] args) {
-    System.out.println("Hello world");
-    connect_to_db("postgres", "postgres", "postgres");
-  }
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-   public static Connection connect_to_db(String dbname, String user, String pass)
-    {
-        Connection con_obj=null;
-        String url="jdbc:postgresql://localhost:5432/";
- 
-        try
-        {
-            con_obj= DriverManager.getConnection(url+dbname,user,pass);
-            if(con_obj!=null)
-            {
-                System.out.println("Connection established successfully !");
-            }
-            else
-            {
-                System.out.println("Connection failed !!");
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-        return con_obj;
+import com.agenda.app.ui.AgendaApp;
+
+@SpringBootApplication
+public class App implements CommandLineRunner {
+
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws IOException {
+        Scanner scan = new Scanner(System.in);
+        PrintStream out = System.out;
+        
+        new AgendaApp(scan, out).execute();
+        
+        scan.close();
     }
 }
