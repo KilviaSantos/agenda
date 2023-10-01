@@ -16,9 +16,9 @@ echo "\n[RESTORE DB]:"
 
 dropdb agenda
 createdb agenda
-## psql -d agenda -f data.sql
+psql -d agenda -f data.sql
 
-echo "\n[START SPRING AND VITE]:"
+echo "\n[START SPRING-BOOT]:"
 
 mvn spring-boot:run
 
