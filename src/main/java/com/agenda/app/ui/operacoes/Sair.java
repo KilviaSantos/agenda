@@ -10,6 +10,8 @@ public class Sair  extends Operacao {
 
   public void execute(ContatoRepository repo) {
     ui.print("Saindo ...");
+
+    
   }
 
   public boolean isLeave(){
