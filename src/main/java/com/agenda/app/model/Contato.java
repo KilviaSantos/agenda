@@ -1,6 +1,5 @@
 package com.agenda.app.model;
 
-import java.util.UUID;
 import java.sql.Timestamp;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -18,8 +17,8 @@ import jakarta.persistence.Table;
 public class Contato {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
 
     private String nome;
     private String endereco;
@@ -44,7 +43,7 @@ public class Contato {
         this.email = email;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
@@ -76,7 +75,7 @@ public class Contato {
         this.updatedAt = updatedAt;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -84,7 +83,7 @@ public class Contato {
         return """
                     CONTATO:
 
-                    [ID]        : %s
+                    [ID]        : %d
                     [Nome]      : %s
                     [Endereco]  : %s
                     [Telefone]  : %s
