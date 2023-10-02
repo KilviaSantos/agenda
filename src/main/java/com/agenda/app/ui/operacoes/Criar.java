@@ -12,7 +12,7 @@ public class Criar extends Operacao {
   @Override
   public void execute(ContatoRepository repo) {
     ui.print("Criando Contato ...");
-
+    
     String nome = ui.input("Digite o nome do contato:");
     String endereco = ui.input("Digite o endereço do contato:");
     String telefone = inputValidPhone();
@@ -34,9 +34,9 @@ public class Criar extends Operacao {
   }
 
     private String inputValidEmail(){
-    String telefone = ui.input("Digite o email do contato:");
+    String email = ui.input("Digite o email do contato:");
     // TODO: implement validation here 
-    
-    return telefone;
+
+    return email;
   }
 }
