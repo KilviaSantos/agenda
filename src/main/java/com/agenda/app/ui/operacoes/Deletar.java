@@ -11,7 +11,20 @@ public class Deletar extends Operacao{
 
   @Override
   public void execute(ContatoRepository repo) {
-    ui.print("Deletando ...");
+    ui.print("Deletando Contato ...");
+    int id = inputValidId(repo);
+    
+    repo.deleteById(id);
+    
+    ui.print("Contato deletado com sucesso!");
   }
-  
+
+  private int inputValidId(ContatoRepository repo){
+    int id = ui.inputInt("Digite o ID do contato que deseja deletar:");
+    if (!repo.existsById(id)) {
+      ui.print("ID não encontrado! Tente novamente.\n");
+      return inputValidId(repo);
+    }
+    return id; 
+  }
 }
